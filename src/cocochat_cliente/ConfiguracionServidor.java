@@ -3,7 +3,7 @@ package cocochat_cliente;
 import java.io.IOException;
 import protocolo.Protocolo;
 
-/** Configuración que comparten las pantallas del cliente. */
+// Aqui se concentran los datos que necesita el cliente para abrir el socket
 public final class ConfiguracionServidor {
 
     // Cambia esta IP si el servidor Java se ejecuta en otra computadora.
@@ -16,6 +16,7 @@ public final class ConfiguracionServidor {
     private ConfiguracionServidor() {}
 
     /**
+     * ConexionChat llama al servidor y devuelve la conexión abierta. También atrapa errores
      * Cuando implementen Login o Registro, llamen a este método en segundo
      * plano con SwingWorker. La conexión puede tardar varios segundos.
      * Tras LOGIN exitoso, conserven ese mismo objeto para toda la sesión.

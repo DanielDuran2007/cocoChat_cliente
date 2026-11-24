@@ -1,10 +1,12 @@
 
 package cocochat_cliente;
 
+//importación de herramientas de diseño:
 import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+//importacion de vistas
 import vistas.Chat;
 import vistas.CrearGrupo;
 import vistas.EnviarSolicitud;
@@ -24,12 +26,15 @@ public class CocoChat_cliente {
     }
 
     private static void mostrarVentana() {
-        JFrame ventana = new JFrame("COCO-CHAT");
-        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //Crea la vetnaan principal titulada COCO-CHAT EQUIPO 2
+        JFrame ventana = new JFrame("COCO-CHAT EQUIPO 2");
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //cierra al terminar el programa
 
         // CardLayout apila los paneles y muestra uno a la vez por su nombre.
         CardLayout paginas = new CardLayout();
         JPanel contenido = new JPanel(paginas);
+        
+        //se crean los ocho paneles:
         contenido.add(new Inicio(), "INICIO");
         contenido.add(new LogIn(), "LOGIN");
         contenido.add(new Registro(), "REGISTRO");
