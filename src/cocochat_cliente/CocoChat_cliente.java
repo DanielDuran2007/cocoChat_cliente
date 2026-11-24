@@ -5,8 +5,7 @@ import protocolo.Protocolo;
 import vistas.LogIn;
 
 public class CocoChat_cliente {
-    //esta es la parte de daniel
-    //respeta mi parte bro
+    
     public static void main(String[] args) {
         // localhost sirve para probar en la computadora del servidor.
         // En otra PC, escribe la IP de la computadora del servidor
