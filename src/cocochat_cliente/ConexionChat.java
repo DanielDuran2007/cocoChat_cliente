@@ -5,7 +5,7 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import protocolo.Protocolo;
 import protocolo.Protocolo.Respuesta;
-
+//esta tambien es mi parte nigga
 /** El cliente conoce la dirección del servidor Java y conversa con él por TCP. */
 public final class ConexionChat implements AutoCloseable {
     private final Socket socket;
