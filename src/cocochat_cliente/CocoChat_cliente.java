@@ -1,5 +1,6 @@
 
 package cocochat_cliente;
+
 import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -17,6 +18,7 @@ import vistas.VisorGeneral;
 public class CocoChat_cliente {
     
         public static void main(String[] args) {
+        
         // Swing crea y modifica sus ventanas en el hilo de eventos.
         SwingUtilities.invokeLater(CocoChat_cliente::mostrarVentana);
     }

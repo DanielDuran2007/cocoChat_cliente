@@ -14,7 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-/** Portada basada en la primera página del PDF. Los botones solo son visuales. */
+
 public final class Inicio extends JPanel {
 
     public Inicio() {
