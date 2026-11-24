@@ -92,10 +92,8 @@ public final class Protocolo {
         boolean correcta = entrada.readBoolean();
         String aviso = entrada.readUTF();
         int cantidad = entrada.readInt();
-        
         if (cantidad < 0 || cantidad > MAX_FILAS) throw new IOException("Respuesta inválida.");
         List<Fila> filas = new ArrayList<>(cantidad);
-        
         for (int i = 0; i < cantidad; i++) {
             filas.add(new Fila(entrada.readInt(), entrada.readUTF(), entrada.readUTF()));
         }
