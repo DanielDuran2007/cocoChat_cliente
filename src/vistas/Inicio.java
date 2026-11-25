@@ -14,7 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-
+//PARTE DE DANIEL
 public final class Inicio extends JPanel {
 
     public Inicio() {
