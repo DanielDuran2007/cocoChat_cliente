@@ -40,7 +40,11 @@ public class CocoChat_cliente {
             ),
                 "INICIO");
         
-        contenido.add(new LogIn(), "LOGIN");
+        contenido.add(new LogIn(()->paginas.show(contenido, "INICIO"),
+                () -> paginas.show(contenido, "PANEL_PRINCIPAL")
+            ),  "LOGIN");
+        
+        
         contenido.add(new Registro(()->paginas.show(contenido, "INICIO"),
                 () -> paginas.show(contenido, "PANEL_PRINCIPAL")
             ), 
