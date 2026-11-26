@@ -35,9 +35,17 @@ public class CocoChat_cliente {
         JPanel contenido = new JPanel(paginas);
         
         //se crean los ocho paneles:
-        contenido.add(new Inicio(), "INICIO");
+        contenido.add(new Inicio(()-> paginas.show(contenido, "REGISTRO"),
+                () -> paginas.show(contenido, "LOGIN")
+            ),
+                "INICIO");
+        
         contenido.add(new LogIn(), "LOGIN");
-        contenido.add(new Registro(), "REGISTRO");
+        contenido.add(new Registro(()->paginas.show(contenido, "INICIO"),
+                () -> paginas.show(contenido, "PANEL_PRINCIPAL")
+            ), 
+                "REGISTRO"
+        );
         contenido.add(new PanelPrincipal(), "PANEL_PRINCIPAL");
         contenido.add(new Solicitudes(), "SOLICITUDES");
         contenido.add(new Chat(), "CHAT");

@@ -14,10 +14,15 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+
 //PARTE DE DANIEL
 public final class Inicio extends JPanel {
 
-    public Inicio() {
+     private final Runnable irInicioSesion;
+    //CONSTRUCTOR, runnable representa una acción que se puede ejecutar
+    public Inicio(Runnable abrirRegistro, Runnable irInicioSesion) {
+        this.irInicioSesion = irInicioSesion;
+        
         super(new GridBagLayout());
         setBackground(Color.WHITE);
         setPreferredSize(new Dimension(900, 506));
@@ -58,7 +63,9 @@ public final class Inicio extends JPanel {
         fila.insets = new Insets(0, 0, 0, 0);
         marco.add(registrarse, fila);
 
-        // Más adelante, aquí se conectarán los botones con el CardLayout.
+        // Aquí se conectan los botones con el CardLayout.
+        registrarse.addActionListener(e -> abrirRegistro.run());
+        iniciarSesion.addActionListener(evento -> irInicioSesion.run());
     }
 
     /** JButton normal con un fondo redondeado dibujado por Java 2D. */
