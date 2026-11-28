@@ -49,11 +49,21 @@ public class CocoChat_cliente {
             ),"REGISTRO"  );
         
         
-        contenido.add(new PanelPrincipal(), "PANEL_PRINCIPAL");
+        PanelPrincipal panelPrincipal = new PanelPrincipal();
+        panelPrincipal.configurarNavegacion(
+                pantalla -> paginas.show(contenido, pantalla),
+                (destino, esGrupo) -> paginas.show(contenido, "CHAT"));
+        contenido.add(panelPrincipal, "PANEL_PRINCIPAL");
         contenido.add(new Solicitudes(), "SOLICITUDES");
         contenido.add(new Chat(), "CHAT");
         contenido.add(new EnviarSolicitud(), "ENVIAR_SOLICITUD");
-        contenido.add(new CrearGrupo(), "CREAR_GRUPO");
+        CrearGrupo crearGrupo = new CrearGrupo(
+                () -> paginas.show(contenido, "PANEL_PRINCIPAL"),
+                () -> {
+                    panelPrincipal.actualizarListas();
+                    paginas.show(contenido, "PANEL_PRINCIPAL");
+                });
+        contenido.add(crearGrupo, "CREAR_GRUPO");
         contenido.add(new VisorGeneral(), "VISOR_GENERAL");
 
         // Para una acción futura, por ejemplo, usen paginas.show(contenido, "LOGIN").
