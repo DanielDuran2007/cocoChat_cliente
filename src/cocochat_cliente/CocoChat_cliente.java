@@ -37,8 +37,7 @@ public class CocoChat_cliente {
         //se crean los ocho paneles:
         contenido.add(new Inicio(()-> paginas.show(contenido, "REGISTRO"),
                 () -> paginas.show(contenido, "LOGIN")
-            ),
-                "INICIO");
+            ),"INICIO");
         
         contenido.add(new LogIn(()->paginas.show(contenido, "INICIO"),
                 () -> paginas.show(contenido, "PANEL_PRINCIPAL")
@@ -47,9 +46,9 @@ public class CocoChat_cliente {
         
         contenido.add(new Registro(()->paginas.show(contenido, "INICIO"),
                 () -> paginas.show(contenido, "PANEL_PRINCIPAL")
-            ), 
-                "REGISTRO"
-        );
+            ),"REGISTRO"  );
+        
+        
         contenido.add(new PanelPrincipal(), "PANEL_PRINCIPAL");
         contenido.add(new Solicitudes(), "SOLICITUDES");
         contenido.add(new Chat(), "CHAT");
