@@ -21,9 +21,8 @@ public final class Inicio extends JPanel {
      private final Runnable irInicioSesion;
     //CONSTRUCTOR, runnable representa una acción que se puede ejecutar
     public Inicio(Runnable abrirRegistro, Runnable irInicioSesion) {
-        this.irInicioSesion = irInicioSesion;
-        
         super(new GridBagLayout());
+        this.irInicioSesion = irInicioSesion;
         setBackground(Color.WHITE);
         setPreferredSize(new Dimension(900, 506));
 
